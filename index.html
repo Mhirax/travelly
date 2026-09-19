@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Travelly | Travel Beyond Limits</title>
+  <meta name="description" content="Travelly — hand-planned trips, group getaways and flexible instalment payments. A portfolio landing page built with HTML, CSS, JavaScript and GSAP." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ============ ANNOUNCEMENT BAR ============ -->
+  <div class="announce" id="announce">
+    <p>✈️ Early-bird offer: save 15% on December getaways booked before 31 October. <a href="#contact">Claim it</a></p>
+    <button class="announce__close" id="announceClose" aria-label="Close announcement">&times;</button>
+  </div>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="nav" id="nav">
+    <div class="nav__inner container">
+      <a href="#top" class="nav__logo">Travelly<span>.</span></a>
+
+      <nav class="nav__menu" id="navMenu" aria-label="Main">
+        <a href="#destinations" class="nav__link">Destinations</a>
+        <a href="#why" class="nav__link">Why Travelly</a>
+        <a href="#groups" class="nav__link">Group Trips</a>
+        <a href="#reviews" class="nav__link">Reviews</a>
+        <a href="#contact" class="nav__link">Contact</a>
+        <a href="#contact" class="btn btn--accent nav__cta">Book Now</a>
+      </nav>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navMenu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+      <div class="hero__media">
+        <img src="images/hero.jpg" alt="A waterfall pouring into a rocky forest pool" class="hero__img" />
+      </div>
+      <div class="hero__overlay"></div>
+
+      <div class="hero__content container">
+        <p class="eyebrow hero__eyebrow">Hand-planned journeys since 2019</p>
+        <h1 class="hero__title">
+          <span class="line"><span class="line__inner">Travel Beyond</span></span>
+          <span class="line"><span class="line__inner"><em>Limits.</em></span></span>
+        </h1>
+        <p class="hero__text">Start your journey at an affordable price with Travelly. Tell us where you dream of going, and we'll handle everything else.</p>
+        <div class="hero__actions">
+          <a href="#contact" class="btn btn--accent">Book Now</a>
+          <a href="#destinations" class="btn btn--ghost">Explore destinations</a>
+        </div>
+      </div>
+
+      <a href="#why" class="hero__scroll" aria-label="Scroll down">
+        <span>Scroll</span>
+        <i></i>
+      </a>
+    </section>
+
+    <!-- ============ FEATURES ============ -->
+    <section class="features section" id="why">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow">Why Travelly</p>
+          <h2 class="section__title reveal">Every detail, <em>handled.</em></h2>
+        </div>
+
+        <div class="features__grid">
+          <article class="feature">
+            <div class="feature__icon">
+              <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 30l36-14-6 18-10-4-6 8v-10l14-10-18 8z"/></svg>
+            </div>
+            <h3>Effortless Travel</h3>
+            <p>You bring the inspiration; we bring it to life, from flights to the last dinner reservation.</p>
+          </article>
+
+          <article class="feature">
+            <div class="feature__icon">
+              <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="10" y="20" width="28" height="20" rx="3"/><path d="M16 20v-6a8 8 0 0116 0v6"/><circle cx="24" cy="30" r="2.5"/></svg>
+            </div>
+            <h3>Exclusive Perks</h3>
+            <p>Room upgrades, member rates and insider access you won't find on booking sites.</p>
+          </article>
+
+          <article class="feature">
+            <div class="feature__icon">
+              <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="8" y="12" width="32" height="22" rx="2"/><path d="M4 38h40"/><path d="M24 17l1.5 3.5 3.5 1.5-3.5 1.5-1.5 3.5-1.5-3.5-3.5-1.5 3.5-1.5z"/></svg>
+            </div>
+            <h3>Tailored Trips</h3>
+            <p>Itineraries built around you: your pace, your budget, your idea of a perfect day.</p>
+          </article>
+
+          <article class="feature">
+            <div class="feature__icon">
+              <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 42s-12-10-12-20a12 12 0 0124 0c0 10-12 20-12 20z"/><circle cx="24" cy="22" r="4"/></svg>
+            </div>
+            <h3>24/7 Support</h3>
+            <p>Missed connection at 3am? A real person picks up and fixes it while you rest.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DESTINATIONS (horizontal scroll on desktop) ============ -->
+    <section class="destinations" id="destinations">
+      <div class="destinations__pin">
+        <div class="destinations__intro container">
+          <p class="eyebrow">Trending this season</p>
+          <h2 class="section__title">Where will you <em>go next?</em></h2>
+          <p class="destinations__hint">Scroll to explore &rarr;</p>
+        </div>
+
+        <div class="destinations__track" id="destTrack">
+          <article class="dest">
+            <img src="images/paris.jpg" alt="The Eiffel Tower over the Seine at dusk" loading="lazy" />
+            <div class="dest__info"><span>France</span><h3>Paris</h3><p>From ₦1.8m</p></div>
+          </article>
+          <article class="dest">
+            <img src="images/venice.jpg" alt="The Rialto Bridge over Venice's Grand Canal" loading="lazy" />
+            <div class="dest__info"><span>Italy</span><h3>Venice</h3><p>From ₦2.1m</p></div>
+          </article>
+          <article class="dest">
+            <img src="images/bali.jpg" alt="A tiered temple on a misty lake in Bali" loading="lazy" />
+            <div class="dest__info"><span>Indonesia</span><h3>Bali</h3><p>From ₦2.4m</p></div>
+          </article>
+          <article class="dest">
+            <img src="images/serengeti.jpg" alt="A lone acacia tree on the Serengeti plains at sunset" loading="lazy" />
+            <div class="dest__info"><span>Tanzania</span><h3>Serengeti</h3><p>From ₦1.5m</p></div>
+          </article>
+          <article class="dest">
+            <img src="images/cappadocia.jpg" alt="Hot-air balloons rising over Cappadocia" loading="lazy" />
+            <div class="dest__info"><span>Türkiye</span><h3>Cappadocia</h3><p>From ₦1.6m</p></div>
+          </article>
+          <article class="dest">
+            <img src="images/halong.jpg" alt="Boats among limestone islands in Ha Long Bay" loading="lazy" />
+            <div class="dest__info"><span>Vietnam</span><h3>Ha Long Bay</h3><p>From ₦2.2m</p></div>
+          </article>
+          <article class="dest">
+            <img src="images/dubai.jpg" alt="The Dubai skyline with the Burj Khalifa at sunrise" loading="lazy" />
+            <div class="dest__info"><span>UAE</span><h3>Dubai</h3><p>From ₦1.2m</p></div>
+          </article>
+          <article class="dest">
+            <img src="images/dolomites.jpg" alt="Rowing boats on a turquoise lake in the Dolomites" loading="lazy" />
+            <div class="dest__info"><span>Italy</span><h3>Dolomites</h3><p>From ₦2.0m</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ADVISORS (split) ============ -->
+    <section class="split section">
+      <div class="container split__inner">
+        <div class="split__media clip-reveal">
+          <img src="images/traveller.jpg" alt="Silhouette of a traveller with a suitcase watching a plane take off" loading="lazy" />
+        </div>
+        <div class="split__text">
+          <p class="eyebrow">Real people, real expertise</p>
+          <h2 class="section__title reveal">Confidence for <em>every journey.</em></h2>
+          <p class="reveal">Every Travelly trip is planned by a dedicated advisor who has actually been there. No chatbots, no call centres: one person who knows your name and your plans.</p>
+          <p class="reveal">That means honest advice, personal care and planning so smooth your trip feels effortless from the very first step.</p>
+
+          <div class="stats">
+            <div class="stat"><strong data-count="12000" data-suffix="+">0</strong><span>Happy travellers</span></div>
+            <div class="stat"><strong data-count="85">0</strong><span>Destinations</span></div>
+            <div class="stat"><strong data-count="4.9" data-decimals="1">0</strong><span>Average rating</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GROUP TRIPS (dark band) ============ -->
+    <section class="groups section section--dark" id="groups">
+      <div class="container split__inner split__inner--reverse">
+        <div class="split__media clip-reveal">
+          <img src="images/group.jpg" alt="A group of friends laughing on a mountain hike" loading="lazy" />
+        </div>
+        <div class="split__text">
+          <p class="eyebrow eyebrow--light">Groups &amp; occasions</p>
+          <h2 class="section__title reveal">Getaways with the <em>entire crew.</em></h2>
+          <p class="reveal">Destination weddings, birthday trips, corporate retreats, family reunions. We turn your occasion into a getaway your guests will talk about for years.</p>
+          <ul class="checklist reveal">
+            <li>One planner for the whole group</li>
+            <li>Group rates on flights and hotels</li>
+            <li>Split payments per guest</li>
+          </ul>
+          <a href="#contact" class="btn btn--accent reveal">Plan a group trip</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ INSTALMENTS ============ -->
+    <section class="instalments section">
+      <div class="container instalments__inner">
+        <div class="instalments__card">
+          <img src="images/resort.jpg" alt="A resort pool surrounded by palm trees and mountains" loading="lazy" class="instalments__img" />
+          <div class="instalments__body">
+            <p class="eyebrow">Flexible payments</p>
+            <h2 class="section__title reveal">Book today, <em>pay over time.</em></h2>
+            <p class="reveal">Lock in today's price with a deposit, then spread the rest across fixed monthly instalments. No hidden fees, no surprises.</p>
+            <div class="plans">
+              <div class="plan"><strong>3</strong><span>months</span></div>
+              <div class="plan plan--featured"><strong>6</strong><span>months</span></div>
+              <div class="plan"><strong>12</strong><span>months</span></div>
+            </div>
+            <a href="#contact" class="btn btn--dark reveal">Check your plan</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ REVIEWS ============ -->
+    <section class="reviews section" id="reviews">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow">Traveller stories</p>
+          <h2 class="section__title reveal">Loved by <em>travellers.</em></h2>
+          <p class="reviews__rating"><span class="stars" aria-hidden="true">★★★★★</span> 4.9 average from 2,300+ reviews</p>
+        </div>
+
+        <div class="carousel" id="carousel">
+          <button class="carousel__btn carousel__btn--prev" id="prevBtn" aria-label="Previous review">&larr;</button>
+
+          <div class="carousel__viewport">
+            <div class="carousel__track" id="carouselTrack">
+              <blockquote class="review">
+                <span class="stars" aria-label="5 stars">★★★★★</span>
+                <p>"Our trip was almost a month long with lots of moving parts. Our advisor handled every single one. Will definitely book again!"</p>
+                <footer><strong>Adaeze O.</strong><span>Lagos → Bali</span></footer>
+              </blockquote>
+              <blockquote class="review">
+                <span class="stars" aria-label="5 stars">★★★★★</span>
+                <p>"They found everything we needed in record time, and answered every question with a smile in their voice."</p>
+                <footer><strong>Tunde A.</strong><span>Abuja → Dubai</span></footer>
+              </blockquote>
+              <blockquote class="review">
+                <span class="stars" aria-label="5 stars">★★★★★</span>
+                <p>"Listened, gave me exactly what I asked for, and always replied fast. The instalment plan made it possible."</p>
+                <footer><strong>Chioma E.</strong><span>Port Harcourt → Paris</span></footer>
+              </blockquote>
+              <blockquote class="review">
+                <span class="stars" aria-label="5 stars">★★★★★</span>
+                <p>"Planned a surprise anniversary in Cappadocia. The balloon at sunrise was the best morning of our lives."</p>
+                <footer><strong>Femi &amp; Lola</strong><span>Ibadan → Cappadocia</span></footer>
+              </blockquote>
+              <blockquote class="review">
+                <span class="stars" aria-label="5 stars">★★★★★</span>
+                <p>"Twenty-two of us, three countries, zero stress. I don't know how they did it, but I'm booking the next one."</p>
+                <footer><strong>Kemi B.</strong><span>Group trip, Italy</span></footer>
+              </blockquote>
+            </div>
+          </div>
+
+          <button class="carousel__btn carousel__btn--next" id="nextBtn" aria-label="Next review">&rarr;</button>
+        </div>
+
+        <div class="carousel__dots" id="carouselDots" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT / CTA ============ -->
+    <section class="cta" id="contact">
+      <div class="cta__media">
+        <img src="images/beach.jpg" alt="Waves washing onto a beach at sunrise" loading="lazy" class="cta__img" />
+      </div>
+      <div class="cta__overlay"></div>
+
+      <div class="container cta__inner">
+        <div class="cta__text">
+          <p class="eyebrow eyebrow--light">Let's plan it together</p>
+          <h2 class="section__title reveal">Your next trip starts <em>with hello.</em></h2>
+          <p class="reveal">Tell us a little about where you'd like to go. An advisor will reply within 24 hours with ideas and a free quote.</p>
+        </div>
+
+        <form class="form" id="contactForm" novalidate>
+          <div class="form__row">
+            <label>Name<input type="text" name="name" required placeholder="Your full name" /></label>
+            <label>Email<input type="email" name="email" required placeholder="you@example.com" /></label>
+          </div>
+          <div class="form__row">
+            <label>Destination
+              <select name="destination">
+                <option>Not sure yet — inspire me</option>
+                <option>Paris</option><option>Venice</option><option>Bali</option>
+                <option>Serengeti</option><option>Cappadocia</option><option>Ha Long Bay</option>
+                <option>Dubai</option><option>Dolomites</option>
+              </select>
+            </label>
+            <label>Travellers<input type="number" name="travellers" min="1" value="2" /></label>
+          </div>
+          <label>Anything else?<textarea name="message" rows="3" placeholder="Dates, budget, special occasion…"></textarea></label>
+          <button type="submit" class="btn btn--accent btn--full">Get my free quote</button>
+          <p class="form__status" id="formStatus" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="#top" class="nav__logo nav__logo--lg">Travelly<span>.</span></a>
+          <p class="footer__tag">for every journey</p>
+          <h4>Don't miss out on travel deals</h4>
+          <p>Holiday savings, travel inspiration and expert tips, straight to your inbox.</p>
+          <form class="newsletter" id="newsletter">
+            <input type="email" placeholder="Email address" aria-label="Email address" required />
+            <button type="submit" class="btn btn--accent">Subscribe</button>
+          </form>
+        </div>
+
+        <div class="footer__cols">
+          <div>
+            <h5>Company</h5>
+            <a href="#why">About</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a><a href="#top">Careers</a>
+          </div>
+          <div>
+            <h5>Trip types</h5>
+            <a href="#top">Honeymoon</a><a href="#groups">Group</a><a href="#top">Family</a><a href="#top">Luxury</a><a href="#top">Last minute</a>
+          </div>
+          <div>
+            <h5>Destinations</h5>
+            <a href="#destinations">Europe</a><a href="#destinations">Africa</a><a href="#destinations">Asia</a><a href="#destinations">Middle East</a>
+          </div>
+          <div>
+            <h5>Follow</h5>
+            <a href="#top">Instagram</a><a href="#top">Facebook</a><a href="#top">X / Twitter</a><a href="#top">TikTok</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; <span id="year"></span> Travelly. A portfolio project. Travelly is a fictional brand.</p>
+        <p>Photos from <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
