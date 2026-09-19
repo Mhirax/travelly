@@ -1,6 +1,6 @@
 # Travelly ✈️
 
-A travel agency landing page built as a portfolio project. It uses plain **HTML, CSS and JavaScript**, with **GSAP** for the animations.
+A travel agency landing page built as a project. It uses plain **HTML, CSS and JavaScript**, with **GSAP** for the animations.
 
 > Travelly is a fictional brand. The reviews, prices and stats are placeholder content.
 
